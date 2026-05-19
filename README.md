@@ -1,105 +1,230 @@
 # ⛅ WeatherWise
 
-**WeatherWise** is a sleek, responsive, and user-friendly web application designed to provide real-time weather information. Built using HTML, CSS, and Vanilla JavaScript, it interacts with the OpenWeatherMap API to fetch and display accurate meteorological data based on either the user's current location or a specific city search.
+🔗 **Live Deployment (AWS S3):**  
+https://weatherwise-rishabh-app.s3-website.ap-south-1.amazonaws.com/
 
-## 🛠️ Tech Stack
+---
 
-*   **HTML5**
-*   **CSS3**
-*   **JavaScript (Vanilla)**
+# 📌 Project Overview
 
-## 🌟 Key Features
+WeatherWise is a sleek, responsive, and user-friendly weather web application designed to provide real-time weather information for any location worldwide.
 
-### 1. 📍 Location-Based Weather (Your Weather Tab)
-*   **Geolocation API Integration:** Asks for the user's permission to access their geographical coordinates (latitude and longitude).
-*   **Automatic Fetching:** Once granted, it automatically fetches and displays the current weather for that exact location.
-*   **Session Storage:** Saves the user's coordinates in `sessionStorage` so they don't have to re-grant permission every time they reload the page during the same session.
+This project was developed and deployed as part of the **AWS Cloud Assignment: “Deploying a Live Website on AWS Cloud Using EC2 or S3.”**
 
-### 2. 🔍 Global City Search (Search Weather Tab)
-*   **Search Functionality:** Allows users to input any city name globally.
-*   **Dynamic Data Retrieval:** Fetches real-time weather data for the searched city using the OpenWeatherMap API's query parameter.
+The application is fully hosted on **Amazon S3 Static Website Hosting** and is publicly accessible through a live URL.
 
-### 3. 📊 Comprehensive Weather Metrics
-The application displays a detailed overview of the weather conditions:
-*   **City Name & Country Flag:** Displays the searched/located city alongside its corresponding national flag (fetched via the FlagCDN API).
-*   **Weather Description:** A brief textual description of the weather (e.g., "clear sky", "light rain").
-*   **Weather Icon:** A visual representation of the current weather condition provided by OpenWeatherMap.
-*   **Temperature:** Current temperature displayed in Celsius (°C).
-*   **Wind Speed:** Current wind speed measured in meters per second (m/s).
-*   **Humidity:** Air humidity percentage (%).
-*   **Cloudiness:** Cloud cover percentage (%).
+The website uses the **OpenWeatherMap API** to fetch accurate live weather data based on:
 
-### 4. 💫 Intuitive UI & UX
-*   **Tabbed Interface:** Smoothly transition between viewing "Your Weather" and searching for a specific city.
-*   **Loading States:** Features a custom loading animation (GIF) that displays while API requests are pending, ensuring the user knows the app is working.
-*   **Error Handling (Basic):** Includes structural scaffolding for handling API errors (e.g., city not found or network issues).
+- User’s current location
+- Any searched city worldwide
 
-## 🛠️ Technologies & Tools Used
+---
 
-*   **HTML5:** Semantic markup defining the application's structure.
-*   **CSS3:** Custom styling featuring Flexbox, Grid, custom properties (variables), media queries, and sophisticated background gradients.
-*   **Vanilla JavaScript (ES6+):** 
-    *   DOM Manipulation (selecting elements, adding/removing classes).
-    *   Event Listeners (clicks, form submissions).
-    *   Asynchronous Programming (`async/await`, `fetch` API for network requests).
-    *   Geolocation API (`navigator.geolocation`).
-    *   Session Storage API (`sessionStorage`).
-*   **APIs:**
-    *   [OpenWeatherMap API](https://openweathermap.org/api): To fetch real-time weather data.
-    *   [FlagCDN](https://flagcdn.com/): To display country flags based on the country code returned by OpenWeatherMap.
+# ☁️ AWS Cloud Deployment Details
 
-## 📂 Project Structure
+## ✅ Deployment Platform
+- Amazon S3 (Static Website Hosting)
 
-```text
+## ✅ AWS Services Used
+- Amazon S3
+- S3 Static Website Hosting
+- Bucket Policy Configuration
+- Public Access Configuration
+
+## ✅ Deployment Objectives Achieved
+- Successfully created and configured an AWS S3 bucket
+- Uploaded website source files to AWS Cloud
+- Enabled static website hosting
+- Configured bucket permissions for public access
+- Generated a live public URL
+- Successfully hosted the website online
+
+---
+
+# 🛠️ Tech Stack
+
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES6+)
+- AWS S3
+- OpenWeatherMap API
+
+---
+
+# 🌟 Key Features
+
+## 1️⃣ 📍 Location-Based Weather (Your Weather Tab)
+
+- Uses the browser's **Geolocation API**
+- Requests user permission to access coordinates
+- Automatically fetches weather data for the current location
+- Stores coordinates in `sessionStorage` for better user experience
+
+---
+
+## 2️⃣ 🔍 Search Weather by City
+
+- Search weather for any city globally
+- Fetches live weather data dynamically
+- Displays accurate weather metrics instantly
+
+---
+
+## 3️⃣ 📊 Detailed Weather Information
+
+The application displays:
+
+- City Name
+- Country Flag
+- Weather Description
+- Weather Icon
+- Temperature (°C)
+- Wind Speed (m/s)
+- Humidity (%)
+- Cloudiness (%)
+
+---
+
+## 4️⃣ 💫 User-Friendly Interface
+
+- Responsive design for all devices
+- Tab-based navigation
+- Loading animation while fetching API data
+- Smooth UI experience
+- Basic error handling support
+
+---
+
+# 🧰 Technologies & APIs Used
+
+## Frontend Technologies
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+## JavaScript Concepts Used
+- DOM Manipulation
+- Event Handling
+- Async/Await
+- Fetch API
+- Geolocation API
+- Session Storage API
+
+## APIs Used
+- OpenWeatherMap API
+- FlagCDN API
+
+---
+
+# 📂 Project Structure
+
+```bash
 WeatherWise-main/
 │
-├── index.html       # The main HTML structure
-├── styles.css       # All styling rules and layout configurations
-├── index.js         # Core application logic and API interactions
-├── images/          # Directory containing all graphical assets
+├── index.html
+├── styles.css
+├── index.js
+├── images/
 │   ├── cloud.png
 │   ├── humidity.png
 │   ├── loading.gif
 │   ├── location.png
 │   ├── search.png
 │   └── wind.png
-└── README.md        # Project documentation (this file)
+│
+└── README.md
 ```
 
-## 🚀 How to Run the Project Locally
+---
 
-Running WeatherWise is incredibly straightforward as it doesn't require complex build steps or a dedicated backend server.
+# 🚀 Steps Performed for AWS Deployment
 
-1.  **Clone or Download:**
-    Clone the repository using Git or download the ZIP file and extract it.
-    ```bash
-    git clone <repository-url>
-    ```
+## 1️⃣ Created an S3 Bucket
+- Created a unique bucket in AWS S3
+- Selected appropriate AWS region
 
-2.  **Open the Application:**
-    Navigate to the project directory and open the `index.html` file directly in your preferred modern web browser (Chrome, Firefox, Edge, Safari).
-    
-    *Optional:* You can also use a simple static server like the "Live Server" extension in VS Code for a better development experience.
+## 2️⃣ Uploaded Website Files
+- Uploaded HTML, CSS, JavaScript, and image assets
 
-## 🔑 Important Note: OpenWeatherMap API Key
+## 3️⃣ Enabled Static Website Hosting
+- Enabled static website hosting in bucket properties
+- Configured:
+  - `index.html` as index document
 
-This application relies on the OpenWeatherMap API.
+## 4️⃣ Configured Public Access
+- Disabled block public access settings
+- Added bucket policy to allow public read access
 
-The `index.js` file currently contains an API key: 
-`const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";`
+## 5️⃣ Generated Live Website URL
+- Successfully accessed the deployed website through AWS-generated endpoint
 
-**⚠️ For developers cloning this project:** 
-While this key might work temporarily for demonstration purposes, it is highly recommended that you generate your own **free API key** to avoid rate limiting or sudden service interruptions.
+---
 
-1.  Go to [OpenWeatherMap](https://openweathermap.org/) and create an account.
-2.  Navigate to your profile and generate a new API key.
-3.  Replace the string value of the `API_KEY` variable inside `index.js` with your newly generated key.
+# 🔑 OpenWeatherMap API Key
 
-## 🧠 What I Learned Building This
+The project currently uses an API key inside `index.js`.
 
-This project served as an excellent practical exercise in modern web development concepts:
-*   Deepened understanding of **Asynchronous JavaScript** by extensively using `async` and `await` with the `fetch` API.
-*   Mastered DOM manipulation for creating dynamic, interactive user interfaces without relying on a framework like React.
-*   Gained practical experience working with the browser's **Geolocation API** and handling user permissions.
-*   Learned how to use **Session Storage** to persist small amounts of data across page reloads.
-*   Improved CSS layout skills using modern techniques to create a clean, glass-morphism style interface.
+```javascript
+const API_KEY = "YOUR_API_KEY";
+```
+
+To use your own API key:
+
+1. Create an account on OpenWeatherMap
+2. Generate a free API key
+3. Replace the existing API key in `index.js`
+
+---
+
+# 💻 How to Run Locally
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+```
+
+## Open the Project
+
+Simply open:
+
+```bash
+index.html
+```
+
+in any modern web browser.
+
+You can also use:
+- VS Code Live Server Extension
+
+---
+
+# 📚 Learning Outcomes
+
+Through this project, I learned:
+
+- AWS S3 static website deployment
+- Cloud hosting fundamentals
+- Website hosting configuration on AWS
+- Bucket permissions and public access management
+- Working with REST APIs
+- Asynchronous JavaScript using async/await
+- Browser Geolocation API
+- Session Storage implementation
+- Responsive UI development using CSS
+
+---
+
+# 📌 Assignment Objective Fulfilled
+
+✔️ Developed a live website using web technologies  
+✔️ Deployed the project on AWS Cloud  
+✔️ Hosted website publicly using Amazon S3  
+✔️ Generated a live accessible URL  
+✔️ Understood cloud deployment workflow and hosting concepts  
+
+---
+
+# 👨‍💻 Developer
+
+**Rishabh Chaurasia**

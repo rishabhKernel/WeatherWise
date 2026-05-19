@@ -1,7 +1,7 @@
 # ⛅ WeatherWise
 
 🔗 **Live Deployment (AWS S3):**  
-https://weatherwise-rishabh-app.s3-website.ap-south-1.amazonaws.com/
+http://weatherwise-rishabh-app.s3-website.ap-south-1.amazonaws.com/
 
 ---
 
